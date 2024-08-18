@@ -1,0 +1,21 @@
+.post-detail-container
+  padding: 1rem
+  max-width: 800px
+  margin: 0 auto
+
+.post-title
+  font-size: 2rem
+  margin-bottom: 1rem
+
+.post-body
+  font-size: 1rem
+   color: #6c757d
+  line-height: 1.5
+  margin-bottom: 1rem
+
+.post-meta
+  font-size: 0.875rem
+  color: #6c757d
+
+button
+  margin-top: 1rem

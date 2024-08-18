@@ -1,0 +1,24 @@
+<!-- TODO ADD CSS -->
+<table class="table table-striped">
+  <thead>
+		<tr>
+			<th scope="col">Title</th>
+			<th scope="col">Resume</th>
+			<th scope="col">See details</th>
+		</tr>
+	</thead>
+  <tbody>
+    <tr *ngFor="let post of paginatedPosts">
+      <td>{{ post.title }}</td>
+      <td>{{ truncateText(post.body, 100) }}</td>
+      <td>
+        <a [routerLink]="['/post', post.id]">See details</a>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+</div>

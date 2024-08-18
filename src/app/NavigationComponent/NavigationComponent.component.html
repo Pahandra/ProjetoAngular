@@ -1,0 +1,16 @@
+<nav>
+  <div class="logo">
+    <a href="/">MyApp</a>
+  </div>
+
+  <button class="navbar-toggler" (click)="toggleMenu()">
+    ☰
+  </button>
+
+  <ul [ngClass]="{'show': isMenuOpen}">
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/posts" routerLinkActive="active">Posts</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+</nav>
